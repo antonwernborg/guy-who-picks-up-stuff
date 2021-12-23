@@ -12,4 +12,5 @@ pickup_dist = 32;
 item = noone;
 has_item = false;
 pickup_buffer = 32;
+hp = 100;
 powerup_cooldown = room_speed*5;

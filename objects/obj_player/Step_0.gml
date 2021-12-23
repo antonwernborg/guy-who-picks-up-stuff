@@ -65,6 +65,12 @@ if (!has_item)
 	}
 }
 
+/// Check if dead
+if (hp < 1)
+{
+	instance_destroy()	
+}
+
 /// Powerups
 inst = instance_place(x,y,obj_powerup);
 if (inst != noone)
@@ -74,7 +80,7 @@ if (inst != noone)
 	with inst instance_destroy();	
 }
 
-camera_get_view_x()
+//camera_get_view_x()
 
 // Make the view follow the player
 view_xview[0] += ((x-(view_wview[0]/2)) - view_xview[0]) * 0.06; 
