@@ -1,5 +1,13 @@
 /// scr_knockback();
-function scr_knockback(force,dir){
-	x += lengthdir_x(force,dir);
-	y += lengthdir_y(force,dir);
+function scr_knockback(obj, force){
+
+/// Knockback
+var knockback_dir = point_direction(x,y,obj.x,obj.y);
+
+lenx = lengthdir_x(force,knockback_dir);
+leny = lengthdir_y(force,knockback_dir);
+
+obj.hspd += lenx;
+obj.vspd += leny;
+
 }
