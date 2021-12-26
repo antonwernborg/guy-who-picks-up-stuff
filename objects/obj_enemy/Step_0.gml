@@ -17,6 +17,12 @@ if (instance_exists(obj_player))
 			alarm[0] = wander_cooldown;
 			rnd_dir = random_range(0, 360);
 		}
+		
+		// change direction if colliding w wall
+		if (place_meeting(x,y,obj_solid))
+		{
+			rnd_dir = -rnd_dir;
+		}
 	}
 	
 	/// collision w player
