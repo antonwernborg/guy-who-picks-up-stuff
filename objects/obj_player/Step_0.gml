@@ -63,33 +63,42 @@ if (place_meeting(x,y+vspd,obj_solid))
 y += vspd;
 
 
-// Picking up items
-if (!has_item)
+// Handling items
+if (pickup_key)
 {
-	if (distance_to_object(obj_pickup) < pickup_dist)
+	/// picking up items
+	if (!has_item)
 	{
-		if (pickup_key)
+		if  (distance_to_object(obj_pickup) < pickup_dist)
 		{
 			inst = instance_nearest(x,y,obj_pickup);
-			inst.pickup = true;
-			has_item = true;
-			item = inst;
+			scr_pickup_item(id,inst);
 		}
-	}
-} else {
-	if (pickup_key) && (place_free(x,y+pickup_buffer))
-	{
-		//change buffer has same dir player is facing
-		item.y = y+pickup_buffer;
-		dis_to_postbox = point_distance(self.x, self.y, obj_postbox.x, obj_postbox.y);
-		if (dis_to_postbox < send_dist)
+	} else {
+		// dropping or delivering items
+	
+		// move the item
+		var idir = dir;
+		if (idir == 0) idir = 180;
+		var ix = x+lengthdir_x(pickup_buffer,idir);
+		var iy = y+lengthdir_y(pickup_buffer,idir);
+		
+		if (place_free(ix,iy))
 		{
-			scr_send_item(self, item);
+			//change buffer has same dir player is facing
+			item.x = ix;
+			item.y = iy;
 		}
-		else
+		
+		// deliver if the player is close to the postbox
+		if (distance_to_object(obj_postbox) < send_dist)
 		{
-			scr_drop_item(self, item);
+			scr_send_item(id, item);
 		}
+		
+		// remove the item
+		scr_drop_item(id, item);
+	
 	}
 }
 

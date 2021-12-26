@@ -10,25 +10,25 @@ if (instance_exists(obj_player))
 	}
 	else
 	{
-		/// idle state
+		/// wander state
 		scr_move(walk_spd, rnd_dir);
-		if change_dir
+		if (alarm[0] <= 0)
 		{
-			change_dir = false;
-			alarm[0] = room_speed*2;
+			alarm[0] = wander_cooldown;
 			rnd_dir = random_range(0, 360);
 		}
 	}
+	
 	/// collision w player
 	var inst = instance_place(x,y,obj_player);
 	if (inst != noone)
 	{
 		inst.hp -= 10;
-		if(inst.item != noone)
+		inst.score_points -= 10;
+		if(inst.has_item)
 		{
 			scr_drop_item(inst, inst.item);
 		}
-		inst.score_points -= 10;
 		scr_knockback(inst, force);
 	}
 }
