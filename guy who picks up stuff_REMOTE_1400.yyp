@@ -6,26 +6,14 @@
     {"id":{"name":"scr_knockback","path":"scripts/scr_knockback/scr_knockback.yy",},"order":1,},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":4,},
     {"id":{"name":"spr_solid","path":"sprites/spr_solid/spr_solid.yy",},"order":2,},
-    {"id":{"name":"scr_movement_collision","path":"scripts/scr_movement_collision/scr_movement_collision.yy",},"order":5,},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"order":8,},
     {"id":{"name":"scr_send_item","path":"scripts/scr_send_item/scr_send_item.yy",},"order":4,},
     {"id":{"name":"spr_boss","path":"sprites/spr_boss/spr_boss.yy",},"order":5,},
-<<<<<<< HEAD
-<<<<<<< HEAD
-    {"id":{"name":"obj_spawnbox","path":"objects/obj_spawnbox/obj_spawnbox.yy",},"order":10,},
-=======
     {"id":{"name":"spr_s_clothes","path":"sprites/spr_s_clothes/spr_s_clothes.yy",},"order":10,},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"order":9,},
     {"id":{"name":"rm_s_fun","path":"rooms/rm_s_fun/rm_s_fun.yy",},"order":2,},
->>>>>>> b1e0a7557250390ae50c90d8db0ed6a7af983393
-=======
-    {"id":{"name":"spr_s_clothes","path":"sprites/spr_s_clothes/spr_s_clothes.yy",},"order":10,},
-    {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"order":9,},
-    {"id":{"name":"rm_s_fun","path":"rooms/rm_s_fun/rm_s_fun.yy",},"order":2,},
->>>>>>> b1e0a7557250390ae50c90d8db0ed6a7af983393
     {"id":{"name":"scr_pickup_item","path":"scripts/scr_pickup_item/scr_pickup_item.yy",},"order":3,},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":5,},
-    {"id":{"name":"spr_spawnbox","path":"sprites/spr_spawnbox/spr_spawnbox.yy",},"order":8,},
     {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},"order":6,},
     {"id":{"name":"scr_move","path":"scripts/scr_move/scr_move.yy",},"order":0,},
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"order":1,},
@@ -35,7 +23,6 @@
     {"id":{"name":"spr_s_snacks","path":"sprites/spr_s_snacks/spr_s_snacks.yy",},"order":9,},
     {"id":{"name":"scr_drop_item","path":"scripts/scr_drop_item/scr_drop_item.yy",},"order":2,},
     {"id":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"order":2,},
-    {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":9,},
     {"id":{"name":"obj_postbox","path":"objects/obj_postbox/obj_postbox.yy",},"order":7,},
     {"id":{"name":"obj_powerup","path":"objects/obj_powerup/obj_powerup.yy",},"order":3,},
     {"id":{"name":"spr_s_buttons","path":"sprites/spr_s_buttons/spr_s_buttons.yy",},"order":12,},
